@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Watercolours</title>
+  <title>Simon Goodwin Watercolours</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Watercolours</h1>
+    <h1>Simon Goodwin – Watercolours</h1>
   </header>
+
+  <section class="about">
+    <h2>About the Artist</h2>
+    <p>
+      <!-- ✏️ Drop your bio text here -->
+      Simon Goodwin is a watercolour artist based in... [your content here]
+    </p>
+  </section>
 
   <main class="gallery">
     <figure>
@@ -23,7 +31,7 @@
     </figure>
 
     <figure>
-      <img src="IMG_8628.png" alt="Watercolour painting 3" />
+      <img src="IMG_8628.png" alt="Watercolour painting 3" loading="lazy" />
       <figcaption>‘An Angler Waits in Aldeburgh Bay’</figcaption>
     </figure>
 
@@ -48,7 +56,7 @@
     </figure>
 
     <figure>
-      <img src="IMG_81234.png" alt="Watercolour painting 9"  />
+      <img src="IMG_81234.png" alt="Watercolour painting 9" loading="lazy" />
       <figcaption>Close Up: ‘Low Tide at Orford Quay’</figcaption>
     </figure>
   </main>
@@ -72,7 +80,6 @@
           fullImg.src = img.src
           fullImg.style = "max-width: 90vw; max-height: 90vh; border-radius: 8px;"
           overlay.appendChild(fullImg)
-
           overlay.addEventListener("click", () => overlay.remove())
           document.body.appendChild(overlay)
         })
