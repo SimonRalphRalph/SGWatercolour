@@ -3,70 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery</title>
+  <title>Watercolours</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".gallery img").forEach(img => {
-      img.addEventListener("click", () => {
-        const overlay = document.createElement("div")
-        overlay.style = `
-          position: fixed;
-          top: 0; left: 0;
-          width: 100vw; height: 100vh;
-          background: rgba(0, 0, 0, 0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 9999;
-        `
-        const fullImg = document.createElement("img")
-        fullImg.src = img.src
-        fullImg.style = "max-width: 90vw; max-height: 90vh; border-radius: 8px;"
-        overlay.appendChild(fullImg)
-
-        overlay.addEventListener("click", () => overlay.remove())
-        document.body.appendChild(overlay)
-      })
-    })
-  })
-</script>
 <body>
   <header>
     <h1>Watercolours</h1>
   </header>
 
   <main class="gallery">
-    <!-- Add images like this -->
-    <img src="IMG_8550.png" alt="Watercolour painting 1" loading="lazy" />
-       <figcaption>‘A Moment in March’ </figcaption>
-  </figure>
-  <img src="IMG_8501.png" alt="Watercolour painting 2" loading="lazy" />
-      <figcaption>‘Starlings Leave the Tree Line’ </figcaption>
-  </figure>
-   <img src="IMG_8442.png" alt="Watercolour painting 3" loading="lazy" />
-    <figcaption>'‘An Angler Waits in Aldeburgh Bay’' </figcaption>
-  </figure>
-   <img src="IMG_8379.png" alt="Watercolour painting 4" loading="lazy" />
-    <figcaption>'‘Iken Marsh, Evening Light’' </figcaption>
-  </figure>
-    <img src="IMG_8123.png" alt="Watercolour painting 5" loading="lazy" />
-    <figcaption>'Close Up: ‘Iken Marsh, Evening Light’' </figcaption>
-  </figure>
+    <figure>
+      <img src="IMG_8550.png" alt="Watercolour painting 1" loading="lazy" />
+      <figcaption>‘A Moment in March’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_8501.png" alt="Watercolour painting 2" loading="lazy" />
+      <figcaption>‘Starlings Leave the Tree Line’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_8442.png" alt="Watercolour painting 3" loading="lazy" />
+      <figcaption>‘An Angler Waits in Aldeburgh Bay’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_8379.png" alt="Watercolour painting 4" loading="lazy" />
+      <figcaption>‘Iken Marsh, Evening Light’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_8123.png" alt="Watercolour painting 5" loading="lazy" />
+      <figcaption>Close Up: ‘Iken Marsh, Evening Light’</figcaption>
+    </figure>
+
+    <figure>
       <img src="IMG_8094.png" alt="Watercolour painting 6" loading="lazy" />
-    <figcaption>'‘Winter Tree Line’' </figcaption>
-  </figure>
-  <img src="IMG_8630.png" alt="Watercolour painting 7" loading="lazy" />
-    <figcaption>'‘Low Tide at Orford Quay’' </figcaption>
-  </figure>
-    <img src="IMG_8379 2.png" alt="Watercolour painting 8" loading="lazy" />
-    <figcaption>'‘Close Up: Low Tide at Orford Quay’' </figcaption>
-  </figure>
-    <img src="IMG_1234.png" alt="Watercolour painting 9" loading="lazy" />
-    <figcaption>'Close Up: ‘Low Tide at Orford Quay’' </figcaption>
-  </figure>
-    <!-- Keep adding -->
+      <figcaption>‘Winter Tree Line’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_8630.png" alt="Watercolour painting 7" loading="lazy" />
+      <figcaption>‘Low Tide at Orford Quay’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_8379 2.png" alt="Watercolour painting 8" loading="lazy" />
+      <figcaption>Close Up: ‘Low Tide at Orford Quay’</figcaption>
+    </figure>
+
+    <figure>
+      <img src="IMG_1234.png" alt="Watercolour painting 9" loading="lazy" />
+      <figcaption>Close Up: ‘Low Tide at Orford Quay’</figcaption>
+    </figure>
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".gallery img").forEach(img => {
+        img.addEventListener("click", () => {
+          const overlay = document.createElement("div")
+          overlay.style = `
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+          `
+          const fullImg = document.createElement("img")
+          fullImg.src = img.src
+          fullImg.style = "max-width: 90vw; max-height: 90vh; border-radius: 8px;"
+          overlay.appendChild(fullImg)
+
+          overlay.addEventListener("click", () => overlay.remove())
+          document.body.appendChild(overlay)
+        })
+      })
+    })
+  </script>
 </body>
 </html>
