@@ -1,14 +1,14 @@
 :root {
   --bg: #fdfdfd;
   --text: #111;
-  --card-bg: #fff;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #111;
     --text: #fdfdfd;
-    --card-bg: #1e1e1e;
+    --overlay-bg: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -22,41 +22,65 @@ body {
   font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
   padding: 2rem;
 }
 
 header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.gallery figure {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.02);
-}
-.gallery figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  cursor: pointer;
 }
 
 .gallery figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--overlay-bg);
+  color: #fff;
+  opacity: 0;
+  padding: 1rem;
   text-align: center;
-  color: var(--text);
-  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.gallery figure:hover figcaption {
+  opacity: 1;
 }
