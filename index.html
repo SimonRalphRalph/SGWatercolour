@@ -6,6 +6,14 @@
   <title>Simon Goodwin Watercolours</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  <footer>
+  <p>Interested in a painting or commission?</p>
+  <p>
+    Email: <a href="#" id="email">[click to reveal]</a><br />
+    Phone: <span id="phone">[click to reveal]</span>
+  </p>
+</footer>
+
 <body>
   <header>
     <h1>Simon Goodwin Watercolours</h1>
@@ -14,7 +22,7 @@
   <section class="about">
     <h2>About the Artist</h2>
     <p>
-      Simon is a UK watercolour artist based in Woodbridge, Suffolk.
+      Simon is a UK watercolour artist based in Orford, Suffolk.
     </p>
   </section>
 
@@ -123,6 +131,20 @@
       observer.observe(el)
     })
   })
+    // Contact reveal (anti-spam)
+const email = "simonralphgoodwin@googlemail.com"
+const phone = "+44 7307 163 308"
+
+document.getElementById("email").addEventListener("click", e => {
+  e.preventDefault()
+  e.target.href = `mailto:${email}`
+  e.target.textContent = email
+})
+
+document.getElementById("phone").addEventListener("click", () => {
+  document.getElementById("phone").textContent = phone
+})
+
 </script>
 
 </body>
