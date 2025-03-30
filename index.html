@@ -96,17 +96,22 @@
     })
 
     // Reveal email and phone
-    const email = "simonralphgoodwin@gmail.com"
-    const phone = "+44 7307 163 308"
+   const email = "simonralphgoodwin@gmail.com"
+const phone = "+44 7307 163 308"
 
-    document.getElementById("email").addEventListener("click", e => {
-      e.preventDefault()
-      e.target.href = `mailto:${email}`
-      e.target.textContent = email
-    })
+document.getElementById("email").addEventListener("click", e => {
+  e.preventDefault()
+  e.target.href = `mailto:${email}`
+  e.target.textContent = email
+})
 
-    document.getElementById("phone").addEventListener("click", () => {
-      document.getElementById("phone").textContent = phone
+document.getElementById("phone").addEventListener("click", e => {
+  e.preventDefault()
+  e.target.href = `tel:${phone}`
+  e.target.textContent = phone
+
+})
+
     })
 
     // Fade-in animation
