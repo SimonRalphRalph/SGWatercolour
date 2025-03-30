@@ -141,3 +141,14 @@ footer a {
   text-decoration: underline;
   cursor: pointer;
 }
+footer a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
