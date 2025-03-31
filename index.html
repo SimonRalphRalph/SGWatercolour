@@ -17,10 +17,6 @@
   </h1>
   <hr class="header-divider" />
 </header>
-
-</header>
-
-
     <section class="about">
       <h2>About the Artist</h2>
       <p>Simon is a watercolour artist based in Orford, Suffolk. Working on 7" x 10" paper, his work explores the relationship between light and landscape, drawing on memory, instinct, and imagination to capture fleeting moments with quiet intensity.</p>
@@ -81,6 +77,7 @@
     </footer>
   </div>
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
     // Modal zoom
     document.querySelectorAll(".gallery img").forEach(img => {
       img.addEventListener("click", () => {
@@ -105,22 +102,19 @@
     })
 
     // Reveal email and phone
-   const email = "simonralphgoodwin@gmail.com"
-const phone = "+44 7307 163 308"
+    const email = "simonralphgoodwin@gmail.com"
+    const phone = "+44 7307 163 308"
 
-document.getElementById("email").addEventListener("click", e => {
-  e.preventDefault()
-  e.target.href = `mailto:${email}`
-  e.target.textContent = email
-})
+    document.getElementById("email").addEventListener("click", e => {
+      e.preventDefault()
+      e.target.href = `mailto:${email}`
+      e.target.textContent = email
+    })
 
-document.getElementById("phone").addEventListener("click", e => {
-  e.preventDefault()
-  e.target.href = `tel:${phone}`
-  e.target.textContent = phone
-
-})
-
+    document.getElementById("phone").addEventListener("click", e => {
+      e.preventDefault()
+      e.target.href = `tel:${phone}`
+      e.target.textContent = phone
     })
 
     // Fade-in animation
@@ -136,6 +130,7 @@ document.getElementById("phone").addEventListener("click", e => {
     document.querySelectorAll(".fade-in").forEach(el => {
       observer.observe(el)
     })
-  </script>
+  })
+</script>
 </body>
 </html>
