@@ -1,3 +1,23 @@
+:root {
+  --bg: #fdfdfd;
+  --text: #111;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+    --text: #fdfdfd;
+    --overlay-bg: rgba(255, 255, 255, 0.1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -7,28 +27,18 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  padding: 2rem;
 }
 
 .site-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.gallery img {
-  width: 100%;
-  max-width: 60%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: block;
-  cursor: pointer;
 }
 
 header {
@@ -60,70 +70,6 @@ header em {
   border: none;
 }
 
-
-.about {
-  max-width: 700px;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  font-size: 1rem;
-  background: var(--bg);
-  color: var(--text);
-  border-top: 1px solid #ccc;
-  opacity: 0.8;
-}
-
-footer a {
-  color: inherit;
-  text-decoration: underline;
-  transition: opacity 0.2s ease;
-}
-
-footer a:hover {
-  opacity: 1;
-}
-
-:root {
-  --bg: #fdfdfd;
-  --text: #111;
-  --overlay-bg: rgba(0, 0, 0, 0.6);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111;
-    --text: #fdfdfd;
-    --overlay-bg: rgba(255, 255, 255, 0.1);
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  padding: 2rem;
-  overflow-x: hidden;
-}
-
-}
-
-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
 .about {
   max-width: 700px;
   margin: 0 auto 4rem auto;
@@ -144,8 +90,6 @@ header {
   flex-grow: 1;
 }
 
-}
-
 .gallery figure {
   position: relative;
   width: 100%;
@@ -155,7 +99,9 @@ header {
 
 .gallery img {
   width: 100%;
+  max-width: 60%;
   height: auto;
+  margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: block;
@@ -163,23 +109,17 @@ header {
 }
 
 .gallery figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--overlay-bg);
-  color: #fff;
-  opacity: 0;
-  padding: 1rem;
+  margin-top: 0.5rem;
   text-align: center;
-  transition: opacity 0.3s ease;
   font-size: 1rem;
-  border-radius: 0 0 8px 8px;
+  opacity: 0.8;
 }
 
-.gallery figure:hover figcaption {
-  opacity: 1;
+.gallery figcaption em {
+  font-style: italic;
+  font-weight: normal;
 }
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -190,6 +130,30 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
+
+footer {
+  margin-top: 5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid #ccc;
+  opacity: 0.8;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 600px) {
   body {
     padding: 1.25rem;
@@ -215,51 +179,8 @@ header {
     font-size: 0.9rem;
     padding: 0.75rem;
   }
-.gallery figcaption {
-  margin-top: 0.5rem;
-  text-align: center;
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-.gallery figcaption em {
-  font-style: italic;
-  font-weight: normal;
-}
 
   .gallery img {
     border-radius: 6px;
   }
 }
-footer {
-  margin-top: 5rem;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 1rem;
-  opacity: 0.7;
-  border-top: 1px solid #ccc;
-}
-
-footer {
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 1rem;
-  background: var(--bg);
-  color: var(--text);
-  border-top: 1px solid #ccc;
-  opacity: 0.8;
-}
-
-footer a {
-  color: inherit;
-  text-decoration: underline;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-footer a:hover {
-  opacity: 1;
-}
-
-}
-
