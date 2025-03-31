@@ -27,7 +27,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: system-ui, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -47,14 +47,16 @@ header {
 }
 
 header h1 {
+  font-family: 'IBM Plex Serif', serif;
   font-size: 2.2rem;
   line-height: 1.8;
   margin: 0;
 }
 
 header em {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   font-style: italic;
-  font-weight: normal;
+  font-weight: 300;
   display: block;
   margin-top: 0.25rem;
   font-size: 1.4rem;
@@ -114,6 +116,7 @@ header em {
 }
 
 .gallery figcaption em {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 300;
   font-style: italic;
@@ -165,8 +168,12 @@ footer a:hover {
     font-size: 1.6rem;
   }
 
-  .about h2 {
-    font-size: 1.3rem;
+ .about h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+
   }
 
   .about p {
