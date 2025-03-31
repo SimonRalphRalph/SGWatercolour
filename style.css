@@ -33,9 +33,19 @@ body {
 
 }
 
-header {
-  text-align: center;
-  padding: 2rem 1rem;
+header h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+header em {
+  font-style: italic;
+  font-weight: normal;
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
 }
 
 .about {
