@@ -111,10 +111,14 @@ header em {
 }
 
 .gallery figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   text-align: center;
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.6;
+  line-height: 1.4;
 }
-
 .gallery figcaption em {
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   font-size: 0.85rem;
