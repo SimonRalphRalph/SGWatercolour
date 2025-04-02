@@ -27,7 +27,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: 'IBM Plex Sans';
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
