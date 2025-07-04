@@ -121,7 +121,7 @@
       e.target.textContent = phone
     })
 
-    // Fade-in animation
+    // Scroll-based fade-in
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -134,7 +134,6 @@
     document.querySelectorAll(".fade-in").forEach(el => {
       observer.observe(el)
     })
-  })
   
 // Fade-in on image load
     const images = document.querySelectorAll(".gallery img");
